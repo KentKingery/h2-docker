@@ -1,6 +1,6 @@
 FROM amazoncorretto:11-alpine3.17
-ADD h2-2.1.214.jar /h2.jar
-
+# ADD h2-2.1.214.jar /h2.jar
+RUN wget https://search.maven.org/remotecontent?filepath=com/h2database/h2/2.1.214/h2-2.1.214.jar -O h2.jar
 RUN mkdir /data
 VOLUME [ "/data" ]
 # TODO - "Pre-" Create the database
